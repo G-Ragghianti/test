@@ -3,6 +3,8 @@
 name: CI
 
 on:
+  push:
+     branches: master    
   pull_request_target: 
      types: synchronize
   pull_request:
