@@ -3,7 +3,8 @@
 name: CI
 
 on:
-  push:
+  pull_request_target: 
+     types: synchronize
   pull_request:
   workflow_dispatch:
 
