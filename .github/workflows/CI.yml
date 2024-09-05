@@ -12,12 +12,16 @@ on:
 
 jobs:
   build:
+    strategy:
+      matrix:
+        test: [one, two]
     runs-on: ubuntu-latest
-
+    env:
+      TEST: ${{matrix.test}}
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run a one-line script
-        run: ls -la
+      - name: Environment
+        run: env
 
 
